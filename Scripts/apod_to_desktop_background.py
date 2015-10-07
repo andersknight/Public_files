@@ -10,6 +10,8 @@ Astronomy Picture of the Day from http://apod.nasa.gov/apod/
 This works on Linux and should also work with OS X 
 (check in set_desktop_background)
 
+Will not change the background if the APOD is a video, just print a comment.
+
 Make sure to change the apod_image_path for your download path.
 """
 
@@ -38,7 +40,7 @@ def determine_apod_url():
     '''opens the APOD site, finds and returns the image url.'''
 
     #find and read in APOD source code
-    with urllib.request.urlopen('http://apod.nasa.gov/apod/ap150919.html') as response:
+    with urllib.request.urlopen('http://apod.nasa.gov/apod/') as response:
         html = str(response.read())
     
     #Regular expression to find image file url and image name (0 and 1)
