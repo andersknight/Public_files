@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 """
 Created on Tue Oct  6 18:48:42 2015
 
@@ -15,7 +15,7 @@ Will not change the background if the APOD is a video, just print a comment.
 Make sure to change the apod_image_path for your download path.
 """
 
-import urllib
+import urllib.request
 import re
 import os, sys
 #If Mac OS X, from appscript import app, mactypes (done in if statement)
